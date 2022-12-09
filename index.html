@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Xoloitzcuintle</title>
+    <title>The xoloitzcuintli</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,19 +20,15 @@
               #BF0404
                */
       body {
-        /* background-color: #f29422; */
+        background-color: #f7d390e7;
         color: white;
-        background-color: #fac767;
         margin: 0;
       }
 
-      main {
-        background-color: #f7d390e7;
-      }
       header {
         background-image: linear-gradient(
             rgba(82, 82, 82, 0.452),
-            rgba(166, 217, 207, 0.295)
+            rgba(82, 82, 82, 0.452)
           ),
           url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/600/original/dog-3.jpg?1670280080);
         background-size: cover;
@@ -40,7 +36,7 @@
         background-repeat: no-repeat;
         text-align: center;
         padding: 215px 0;
-
+        box-shadow: 11px 14px 10px 0px rgba(73, 62, 56, 0.2);
         margin-bottom: 30px;
       }
       header h1 {
@@ -61,7 +57,7 @@
       section {
         max-width: 100%;
         margin: 0 auto;
-        padding: 100px;
+        padding: 100px 100px 0 100px;
       }
       section h2 {
         font-weight: 700;
@@ -76,9 +72,13 @@
         line-height: 1.5;
         margin: 0;
         letter-spacing: 5px;
-        color: #272044;
-        opacity: 0.3;
+        color: #f26b1d;
+        opacity: 0.7;
         text-transform: uppercase;
+      }
+      section h4 {
+        color: #f26b1d;
+        opacity: 0.7;
       }
       section p {
         font-style: normal;
@@ -89,7 +89,17 @@
         opacity: 0.7;
       }
       section.secondary {
-        background-color: #f26b1d;
+        margin-top: 100px;
+        padding: 100px;
+        border-radius: 50% 0% 50% 0%;
+
+        background: radial-gradient(
+          circle,
+          rgba(242, 148, 34, 1) 18%,
+          rgba(242, 107, 29, 1) 74%
+        );
+
+        box-shadow: -2px 14px 10px 0px rgba(242, 107, 29, 0.2);
       }
       section.secondary h2 {
         text-align: center;
@@ -97,67 +107,163 @@
         font-size: 60px;
         color: white;
       }
+      section.secondary h4 {
+       font-size: 20px;
+        color: white;
+      }
+
       footer {
-        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/593/original/Marigolds.jpg?1670279583");
+        color: white;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.548),
+            rgba(82, 82, 82, 0.452)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/600/original/dog-3.jpg?1670280080);
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 70px;
+        padding-bottom: 100px;
+      }
+
+      footer h3 {
+        font-family: "Bigshot One", cursive;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #faa675;
+      }
+      footer p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
+        opacity: 0.7;
+      }
+      footer ul {
+        margin: 0;
+        padding: 0;
+      }
+      footer li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      footer a {
+        color: rgb(252, 221, 180);
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 24px;
+        font-size: 18px;
+      }
+      /* Grid */
+      .grid {
+        display: grid;
+        gap: 64px;
       }
       .grid-col-2 {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 64px;
         align-items: center;
       }
       .grid-col-3 {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 64px;
         align-items: center;
         justify-items: center;
         justify-content: center;
       }
+      .grid-footer {
+        grid-template-columns: 1fr 2fr 2fr;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
       .responsive-img {
         width: 100%;
       }
       .shadow-img {
         box-shadow: 12px 12px 2px 1px rgba(242, 107, 29, 0.2);
+        transition: all 0.4s ease-out;
+      }
+      .shadow-img:hover {
+        box-shadow: 19px 18px 9px 1px rgba(242, 107, 29, 0.144);
+        transition: all 0.4s ease-out;
       }
       .container {
         max-width: 1400px;
         margin: 0 auto;
       }
+
       .content {
-        background-color: #f6bd76;
-        padding: 55px;
+        background-color: #f7ca78;
+        padding: 70px;
         width: 300px;
         height: 300px;
       }
+      span {
+        display: inline-flex;
+        
+      }
+      .shape {
+        background-color:white;
+         border:4px solid white ;
+         margin-right: 8px;
+        border-radius:50% ;
+        width: 10px;
+        height: 10px;
+      }
+      .shape-outline{
+      border:4px solid white ;
+      margin-right: 8px;
+        border-radius:50% ;
+        width: 10px;
+        height: 10px;
+      }
       .content.shape1 {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/799/original/1.png?1670366802);
-        background-size: cover;
-        border-radius: 0 100px 100px 0;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/013/original/Untitled_Artwork_%2813%29.png?1670447647);
+        background-size: contain;
+        border-radius: 0% 50% 50% 0%;
+        transition: all 0.4s ease-out;
       }
       .content.shape1:hover {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/800/original/2.png?1670366966);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/016/original/Untitled_Artwork_%2814%29.png?1670447833);
         background-size: cover;
-        transition-duration: 40ms;
+        transition: all 0.4s ease-out;
+        box-shadow: 12px 12px 2px 1px rgba(191, 4, 4, 0.2);
       }
       .content.shape2 {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/803/original/3.png?1670367462);
-        background-size: cover;
-        border-radius: 100px;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/019/original/Untitled_Artwork_%2815%29.png?1670448273);
+        background-size: contain;
+        border-radius: 50%;
+        transition: all 0.4s ease-out;
       }
       .content.shape2:hover {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/805/original/4.png?1670367470);
-        background-size: cover;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/022/original/Untitled_Artwork_%2816%29.png?1670448523);
+        background-size: contain;
+        transition: all 0.4s ease-out;
+        box-shadow: 12px 12px 2px 1px rgba(191, 4, 4, 0.2);
       }
-
       .content.shape3 {
-        border-radius: 100px 0 0 100px;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/023/original/Untitled_Artwork_%2818%29.png?1670448839);
+        background-size: contain;
+        border-radius: 50% 0% 50% 0%;
+        transition: all 0.4s ease-out;
+      }
+      .content.shape3:hover {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/024/original/Untitled_Artwork_%2817%29.png?1670448901);
+        background-size: contain;
+        transition: all 0.4s ease-out;
+        box-shadow: 12px 12px 2px 1px rgba(191, 4, 4, 0.2);
       }
 
       .content h4 {
         font-size: 30px;
         margin: 0;
+      }
+      /* Buttons */
+
+      .nav a {
+        display: inline-block;
+        margin-left: 10px;
       }
       .btn {
         font-weight: 700;
@@ -177,9 +283,9 @@
         border: 6px solid #f26b1d;
       }
       .btn-main:hover {
-        background: #f8d28c;
-        border: 6px solid #f8d28c;
-        color: #f26b1d;
+        background: rgba(255, 255, 255, 0.192);
+        border: 6px solid #f26b1d;
+        color: #ffffff;
       }
       .btn-secondary {
         color: white;
@@ -196,14 +302,32 @@
   <body>
     <header>
       <h1>The Xoloitzcuintli</h1>
-      <h2>Ancient Guide to the Underworld</h2>
-      <a href="#history" class="btn btn-main">HISTORY</a>
-      <a href="#FAQ" class="btn btn-main">FAQ</a>
+      <h2>Mexico’s Ancient Dog Breed</h2>
+      <div class="nav">
+        <a href="#history" class="btn btn-main">HISTORY</a>
+        <a href="#FAQ" class="btn btn-main">FAQ</a>
+        <a href="#art" class="btn btn-main">ART LEGACY</a>
+      </div>
     </header>
     <div class="container">
       <main>
         <section>
-          <div class="grid-col-2">
+          <div id="history">
+            <h3>Xoloitzcuintli</h3>
+            <h2>Mexico’s Ancient Dog Breed</h2>
+            <p>
+              One of the most rare and unique dog breeds in the world, the
+              Xoloitzcuintli, or Xolo (“sho-lo”) for short, has been around for
+              a very long time. Also known as the “Mexican hairless dog,” these
+              (usually) bald, ancient beauties are revered for their calm and
+              loyal disposition. Despite their long history and reputation,
+              Xolos remain quite rare in the U.S., so you may not have met one
+              in real life. <span></span>
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="grid grid-col-2">
             <div>
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/610/original/dog-4.jpg?1670281333"
@@ -211,8 +335,9 @@
                 class="responsive-img shadow-img"
               />
             </div>
-            <div>
-              <h3 id="history">Xoloitzcuintli History</h3>
+
+            <div id="history">
+              <h3>Xoloitzcuintli History</h3>
               <h2>The Legend of Xoloitzcuintli</h2>
               <p>
                 The earliest accounts of Xolo dogs date back more than 4000
@@ -239,27 +364,164 @@
             </div>
           </div>
         </section>
+        <div id="FAQ"></div>
         <section class="secondary">
-          <h2 id="FAQ">Frequently Asked Questions</h2>
-          <div class="grid-col-3">
+          <h2>Frequently Asked Questions</h2>
+          <div class="grid grid-col-3">
             <div class="content shape1"></div>
             <div class="content shape2"></div>
-            <div class="content shape3">
-              <h4>Are Xoloitzcuintli rare or extinct?</h4>
+            <div class="content shape3"></div>
+          </div>
+        </section>
+        <div id="art"></div>
+        <section>
+          <div class="grid grid-col-2">
+            <div id="Art">
+              <h3>Xoloitzcuintli Art Legacy</h3>
+              <h2>Part of 20th Century Art History</h2>
               <p>
-                Xolo is indeed rare, but the breed is not extinct. It seems to
-                have gained and lost popularity quite a bit throughout the
-                years, ever since it was first recognized as an official breed
-                by the American Kennel Club in 1887.
+                Xolos appeared in the life and works of famed artists Diego
+                Rivera and Frida Kahlo. Rivera and Kahlo, who are famed for
+                their respective artwork as well as their long, tumultuous
+                relationship, raised Xolos in their shared homes. Kahlo’s work
+                famously includes representations of her favorite dog, Señor
+                Xototl.
               </p>
+
+              <a
+                class="btn btn-secondary"
+                target="_blank"
+                href="https://www.rover.com/blog/xoloitzcuintli-mexican-hairless-dog/"
+                >Learn More</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/040/original/Frida_Kahlo_by_Lola_A%CC%81lvarez_Bravo__ca._1944.jpeg?1670452449"
+                alt=""
+                class="responsive-img shadow-img"
+              />
+
+              <h4>
+                Frida Kahlo, by Lola Álvarez Bravo, ca. 1944 © Frida Kahlo
+                Museum
+              </h4>
             </div>
           </div>
         </section>
+        <section class="secondary">
+          <h2 id="">Xoloitzcuintli Characteristics</h2>
+          <div class="grid grid-col-2">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/288/original/xolo-pair.jpg?1670541254"
+                class="responsive-img"
+                alt=""
+              />
+              <a
+                href="https://www.instagram.com/p/BEthuzbJB0h/?utm_source=ig_web_copy_link"
+                target="_blank"
+                >via Instagram/elevagedumaraisdeschimeres</a
+              >
+            </div>
 
-        <footer>
-          <h4>coded by Crystal Lopez</h4>
-        </footer>
+            <div>
+              <h4>Friendliness</h3>
+                <span>
+                <div class="shape"></div> 
+               <div class="shape"></div> 
+               <div class="shape"></div> 
+               <div class="shape"></div> 
+               <div class="shape-outline"></div> 
+                </span>
+
+                <h4>Health Issues</h3>
+                <span>
+                <div class="shape"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+                </span>
+
+                <h4>Shedding Level</h3>
+                <span>
+                <div class="shape"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+                </span>
+                  <h4>Good With Kids</h3>
+                <span>
+                <div class="shape"></div> 
+               <div class="shape"></div> 
+               <div class="shape"></div> 
+               <div class="shape-outline"></div> 
+               <div class="shape-outline"></div> 
+                </span>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+    <footer>
+      <div class="grid grid-footer">
+        <div>
+          <h3>More about Xoloitzcuintli</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.rover.com/blog/xoloitzcuintli-mexican-hairless-dog/"
+                target="_blank"
+              >
+                For Dog People Article
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mestizomarket.com/2021/03/16/a-brief-history-of-xoloitzcuintli-breed/#:~:text=The%20dogs%20were%20named%20by,the%20mortal%20realm%20for%20humans."
+                target="_blank"
+                >Mestizo Mexican Market Article</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://be.chewy.com/dog-breed/xoloitzcuintli/"
+                target="_blank"
+                >More FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Me</h3>
+          <p>
+            Hi! My name is Crystal lopez and I'm an inspiring front-end
+            developer. I'm very fond of Xoloitzcuintli dogs and wish more people
+            learn more about them and their rich history. I created this page as
+            part of the Pet Landing Page Challenge for SheCodes to develop my
+            coding skills.
+          </p>
+        </div>
+        <div>
+          <h3>About this website</h3>
+          <p>
+            I created this page as part of the Pet Landing Page Challenge to
+            develop my coding skills. This project was created by
+            <a href="https://www.crystallpzcodes.com/" target="_blank"
+              >Crystal Lopez</a
+            >
+            and it's
+            <a
+              href="https://github.com/crystal-lpz/dog-website.git"
+              target="_blank"
+              >opened sourced.</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
