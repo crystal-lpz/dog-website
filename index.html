@@ -12,13 +12,6 @@
       rel="stylesheet"
     />
     <style>
-      /*
-              #A7D9D0
-              #F2AB27
-              #F29422
-              #F26B1D
-              #BF0404
-               */
       body {
         background-color: #f7d390e7;
         color: white;
@@ -54,6 +47,7 @@
         margin: 0;
         color: white;
       }
+
       section {
         max-width: 100%;
         margin: 0 auto;
@@ -76,7 +70,8 @@
         opacity: 0.7;
         text-transform: uppercase;
       }
-      section h4 {
+
+      section h5 {
         color: #f26b1d;
         opacity: 0.7;
       }
@@ -107,9 +102,23 @@
         font-size: 60px;
         color: white;
       }
+      section.secondary h3 {
+        font-size: 30px;
+        color: black;
+        font-weight: 700;
+        margin: 0;
+        text-transform: none;
+        letter-spacing: 1;
+      }
       section.secondary h4 {
-       font-size: 20px;
+        font-size: 20px;
+        color: #644711;
+        opacity: 0.8;
+      }
+      section.secondary a {
+        text-decoration: none;
         color: white;
+        opacity: 0.5;
       }
 
       footer {
@@ -124,6 +133,7 @@
         background-repeat: no-repeat;
         padding-top: 70px;
         padding-bottom: 100px;
+        margin-top: 100px;
       }
 
       footer h3 {
@@ -156,14 +166,61 @@
         line-height: 24px;
         font-size: 18px;
       }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .responsive-img {
+        width: 100%;
+      }
+      .responsive-img-50 {
+        width: 50%;
+      }
+      .shadow-img {
+        box-shadow: 12px 12px 2px 1px rgba(242, 107, 29, 0.281);
+        transition: all 0.4s ease-out;
+      }
+      .shadow-img:hover {
+        box-shadow: 19px 18px 9px 1px rgba(242, 107, 29, 0.144);
+        transition: all 0.4s ease-out;
+      }
+      .circle {
+        border-radius: 50% 0% 0% 50%;
+      }
+      .contentShape {
+        background-color: #f26b1d;
+        padding: 70px;
+        width: 360px;
+        height: 360px;
+        margin: 0 auto;
+      }
+      .shape-color {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/456/original/Mexican-Hairless-Terrier-origin.png?1670629747);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50% 50% 0% 50%;
+      }
+      .text-right {
+        text-align: right;
+        display: block;
+      }
+
       /* Grid */
+      .align-center {
+        align-items: center;
+      }
       .grid {
         display: grid;
         gap: 64px;
       }
       .grid-col-2 {
         grid-template-columns: 1fr 1fr;
+      }
+      .grid-col-2-sm {
+        grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 4px;
       }
       .grid-col-3 {
         grid-template-columns: 1fr 1fr 1fr;
@@ -176,47 +233,37 @@
         max-width: 1400px;
         margin: 0 auto;
       }
+      /*  */
 
-      .responsive-img {
-        width: 100%;
-      }
-      .shadow-img {
-        box-shadow: 12px 12px 2px 1px rgba(242, 107, 29, 0.2);
-        transition: all 0.4s ease-out;
-      }
-      .shadow-img:hover {
-        box-shadow: 19px 18px 9px 1px rgba(242, 107, 29, 0.144);
-        transition: all 0.4s ease-out;
-      }
-      .container {
-        max-width: 1400px;
-        margin: 0 auto;
+      /* scale rating */
+
+      span {
+        display: inline-flex;
       }
 
+      .shape {
+        background-color: #f7d79a;
+        border: 4px solid#F7D79A;
+        margin-right: 8px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
+      .shape-outline {
+        border: 4px solid #f7d79a;
+        margin-right: 8px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
+      /*  */
+
+      /* FAQ */
       .content {
         background-color: #f7ca78;
         padding: 70px;
         width: 300px;
         height: 300px;
-      }
-      span {
-        display: inline-flex;
-        
-      }
-      .shape {
-        background-color:white;
-         border:4px solid white ;
-         margin-right: 8px;
-        border-radius:50% ;
-        width: 10px;
-        height: 10px;
-      }
-      .shape-outline{
-      border:4px solid white ;
-      margin-right: 8px;
-        border-radius:50% ;
-        width: 10px;
-        height: 10px;
       }
       .content.shape1 {
         background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/013/original/Untitled_Artwork_%2813%29.png?1670447647);
@@ -254,11 +301,8 @@
         transition: all 0.4s ease-out;
         box-shadow: 12px 12px 2px 1px rgba(191, 4, 4, 0.2);
       }
+      /*  */
 
-      .content h4 {
-        font-size: 30px;
-        margin: 0;
-      }
       /* Buttons */
 
       .nav a {
@@ -267,7 +311,7 @@
       }
       .btn {
         font-weight: 700;
-        font-size: 14px;
+
         line-height: 1.5;
         text-align: center;
         padding: 16px 32px;
@@ -277,25 +321,26 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-      .btn-main {
+      .btn-header {
         color: white;
-        background: #f26b1d;
-        border: 6px solid #f26b1d;
+        font-size: 18px;
+        text-decoration: underline 5px;
       }
-      .btn-main:hover {
-        background: rgba(255, 255, 255, 0.192);
-        border: 6px solid #f26b1d;
-        color: #ffffff;
+      .btn-header:hover {
+        text-decoration: overline underline 5px;
       }
       .btn-secondary {
+        font-size: 14px;
         color: white;
         background: #f26b1d;
         border: 6px solid #f26b1d;
+        transition: all 0.4s ease-out;
       }
       .btn-secondary:hover {
-        background: #f8d28c;
-
-        color: #f26b1d;
+        background: #f26b1dd5;
+        border: 6px solid #f26b1dd5;
+        transition: all 0.4s ease-out;
+        box-shadow: 9px 9px 2px 1px rgba(242, 107, 29, 0.281);
       }
     </style>
   </head>
@@ -304,9 +349,10 @@
       <h1>The Xoloitzcuintli</h1>
       <h2>Mexico’s Ancient Dog Breed</h2>
       <div class="nav">
-        <a href="#history" class="btn btn-main">HISTORY</a>
-        <a href="#FAQ" class="btn btn-main">FAQ</a>
-        <a href="#art" class="btn btn-main">ART LEGACY</a>
+        <a href="#history" class="btn btn-header">HISTORY</a>
+        <a href="#FAQ" class="btn btn-header">FAQ</a>
+        <a href="#art" class="btn btn-header">ART LEGACY</a>
+        <a href="#traits" class="btn btn-header">Charateriestics</a>
       </div>
     </header>
     <div class="container">
@@ -375,7 +421,7 @@
         </section>
         <div id="art"></div>
         <section>
-          <div class="grid grid-col-2">
+          <div class="grid grid-col-2 align-center">
             <div id="Art">
               <h3>Xoloitzcuintli Art Legacy</h3>
               <h2>Part of 20th Century Art History</h2>
@@ -403,65 +449,127 @@
                 class="responsive-img shadow-img"
               />
 
-              <h4>
+              <h5>
                 Frida Kahlo, by Lola Álvarez Bravo, ca. 1944 © Frida Kahlo
                 Museum
-              </h4>
+              </h5>
             </div>
           </div>
         </section>
-        <section class="secondary">
-          <h2 id="">Xoloitzcuintli Characteristics</h2>
+
+        <section id="traits" class="secondary">
+          <h2>Xoloitzcuintli Traits</h2>
           <div class="grid grid-col-2">
             <div>
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/288/original/xolo-pair.jpg?1670541254"
-                class="responsive-img"
+                class="responsive-img circle shadow-img"
                 alt=""
               />
               <a
                 href="https://www.instagram.com/p/BEthuzbJB0h/?utm_source=ig_web_copy_link"
                 target="_blank"
-                >via Instagram/elevagedumaraisdeschimeres</a
+                class="text-right"
+              >
+                via Instagram/elevagedumaraisdeschimeres</a
               >
             </div>
 
             <div>
-              <h4>Friendliness</h3>
-                <span>
-                <div class="shape"></div> 
-               <div class="shape"></div> 
-               <div class="shape"></div> 
-               <div class="shape"></div> 
-               <div class="shape-outline"></div> 
-                </span>
+              <h3>Xoloitzcuintli Charateriestics</h3>
+              <p>
+                Here are the qualities you can expect when raising a
+                Xoloitzcuintli on a scale of 1 circle (low) to 5 circles (high).
+                These attributes were rated by several pet experts, including a
+                dog trainer, veterinarian and behaviorist. Remember that dogs
+                are individuals, and not all dogs, even of the same breed, will
+                fit the mold.
+              </p>
+              <div class="grid grid-col-2-sm">
+                <div>
+                  <h4>Friendliness</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
 
-                <h4>Health Issues</h3>
-                <span>
-                <div class="shape"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-                </span>
+                <div>
+                  <h4>Health Issues</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
 
-                <h4>Shedding Level</h3>
-                <span>
-                <div class="shape"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-                </span>
-                  <h4>Good With Kids</h3>
-                <span>
-                <div class="shape"></div> 
-               <div class="shape"></div> 
-               <div class="shape"></div> 
-               <div class="shape-outline"></div> 
-               <div class="shape-outline"></div> 
-                </span>
+                <div>
+                  <h4>Good With Other Dogs</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
+
+                <div>
+                  <h4>Shedding Level</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
+
+                <div>
+                  <h4>Good With Kids</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
+
+                <div>
+                  <h4>Sensitive to Cold Weather</h4>
+                  <span>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape-outline"></div>
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div class="grid grid-col-2 align-center">
+            <div>
+              <h3>Xoloitzcuintli</h3>
+              <h2>Conclusion</h2>
+              <p>
+                Xoloitzcuintles are national treasures in Mexico, with a history
+                that goes back at least 3,000 years. I'm very fond of
+                Xoloitzcuintli dogs and wanted to create this website to bring
+                light to this rare dog and teach people about its rich history.
+                Thank you for visiting this site.
+              </p>
+            </div>
+
+            <div class="contentShape shape-color shadow-img"></div>
           </div>
         </section>
       </main>
